@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "lambda:GetFunctionConfiguration",
+            "Resource": [
+                "arn:aws:lambda:ap-northeast-2:____:function:____-rds-stop",
+                "arn:aws:lambda:ap-northeast-2:____:function:____-rds-start"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "rds:DescribeDBInstances",
+                "rds:StartDBInstance",
+                "rds:StopDBInstance",
+                "rds:DescribeDBClusters",
+                "rds:StartDBCluster",
+                "rds:StopDBCluster",
+                "logs:CreateLogStream",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
